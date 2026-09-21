@@ -75,22 +75,64 @@ export default function WelcomeScreen({ onOpen }) {
         <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-purple-200/40 rounded-full blur-2xl animate-float-slow" />
       </div>
 
-      {/* Center Birthday Photo Avatar */}
+      {/* Center Cute Couple Illustration */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="relative z-10 mb-8"
       >
-        <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full bg-white/80 p-2.5 shadow-2xl border-4 border-white backdrop-blur-md flex items-center justify-center relative group overflow-hidden">
-          <img
-            src="/1.jpeg"
-            alt="Birthday Partner"
-            className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500"
-          />
+        <div className="w-48 h-48 sm:w-56 sm:h-56 mx-auto rounded-full bg-white/60 p-4 shadow-xl border-4 border-white/80 backdrop-blur-md flex items-center justify-center relative">
+          <svg viewBox="0 0 200 200" className="w-full h-full">
+            {/* Soft background glow */}
+            <circle cx="100" cy="100" r="90" fill="#FFE4E6" opacity="0.6" />
+            
+            {/* Left Cute Character (Boy/Partner 1) */}
+            <g className="animate-float-slow">
+              {/* Body */}
+              <path d="M50 145 C50 115, 85 115, 85 145 Z" fill="#93C5FD" />
+              {/* Head */}
+              <circle cx="67.5" cy="100" r="22" fill="#FED7AA" />
+              {/* Hair */}
+              <path d="M47 96 C47 75, 88 75, 88 96 C80 88, 55 88, 47 96 Z" fill="#475569" />
+              {/* Eyes */}
+              <circle cx="62" cy="98" r="2.5" fill="#1E293B" />
+              <circle cx="73" cy="98" r="2.5" fill="#1E293B" />
+              {/* Blush */}
+              <ellipse cx="58" cy="104" rx="3" ry="2" fill="#F43F5E" opacity="0.6" />
+              <ellipse cx="77" cy="104" rx="3" ry="2" fill="#F43F5E" opacity="0.6" />
+              {/* Smile */}
+              <path d="M64 105 Q67.5 110 71 105" stroke="#1E293B" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+            </g>
+
+            {/* Right Cute Character (Girl/Partner 2) */}
+            <g className="animate-float">
+              {/* Body */}
+              <path d="M115 145 C115 115, 150 115, 150 145 Z" fill="#F472B6" />
+              {/* Head */}
+              <circle cx="132.5" cy="100" r="22" fill="#FED7AA" />
+              {/* Long Cute Hair */}
+              <path d="M110 95 C110 70, 155 70, 155 95 C158 120, 152 135, 148 135 C146 115, 145 95, 132.5 95 C120 95, 119 115, 117 135 C113 135, 107 120, 110 95 Z" fill="#78350F" />
+              {/* Flower Ribbon in hair */}
+              <circle cx="120" cy="82" r="4" fill="#F43F5E" />
+              <circle cx="120" cy="82" r="1.5" fill="#FEF08A" />
+              {/* Eyes */}
+              <circle cx="127" cy="98" r="2.5" fill="#1E293B" />
+              <circle cx="138" cy="98" r="2.5" fill="#1E293B" />
+              {/* Blush */}
+              <ellipse cx="123" cy="104" rx="3" ry="2" fill="#F43F5E" opacity="0.7" />
+              <ellipse cx="142" cy="104" rx="3" ry="2" fill="#F43F5E" opacity="0.7" />
+              {/* Smile */}
+              <path d="M129 105 Q132.5 110 136 105" stroke="#1E293B" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+            </g>
+
+            {/* Floating Heart between them */}
+            <path d="M100 82 Q95 72 88 80 Q88 88 100 96 Q112 88 112 80 Q105 72 100 82" fill="#F43F5E" className="animate-bounce" />
+          </svg>
+
           {/* Floating heart badge */}
-          <div className="absolute top-2 right-2 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full p-2.5 text-sm shadow-lg animate-bounce">
-            🎂
+          <div className="absolute -top-3 -right-2 bg-pink-500 text-white rounded-full p-2 text-xs shadow-md animate-pulse">
+            💗
           </div>
         </div>
       </motion.div>

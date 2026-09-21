@@ -65,24 +65,6 @@ export default function Hero() {
           "{CONFIG.hero.headline}"
         </h2>
 
-        {/* Hero Photo Display (1.jpeg) */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="relative mx-auto w-44 h-52 sm:w-52 sm:h-64 bg-white p-3 rounded-2xl shadow-polaroid border-2 border-white rotate-[-2deg] hover:rotate-0 hover:scale-105 transition-all duration-300"
-        >
-          {/* Washi Tape Accent */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-pink-200/90 backdrop-blur-sm rotate-[2deg] rounded-sm shadow-sm pointer-events-none z-20" />
-          <div className="w-full h-full overflow-hidden rounded-xl bg-pink-50 relative aspect-[4/5]">
-            <img
-              src="/1.jpeg"
-              alt="Birthday Partner"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-        </motion.div>
-
         {/* Partner Name Display */}
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
